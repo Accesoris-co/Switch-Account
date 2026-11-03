@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Switch Account - Session Manager",
+  "version": "1.0.0",
+  "description": "Ekstensi browser untuk menyimpan dan berganti sesi akun dengan mudah di berbagai situs web.",
+  "permissions": [
+    "cookies",
+    "storage",
+    "tabs",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background/background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Switch Account"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "switch-account@accesoris.co",
+      "strict_min_version": "109.0"
+    }
+  }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Switch Account</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-title">
+      <h2>Switch Account</h2>
+      <span class="badge">MV3</span>
+    </div>
+    <p class="subtitle" id="current-domain">Memuat domain...</p>
+  </header>
+
+  <main class="content">
+    <div class="active-session-card">
+      <span class="label">Sesi Aktif:</span>
+      <strong id="active-session-name">Default / Belum Disimpan</strong>
+    </div>
+
+    <section class="action-section">
+      <div class="input-group">
+        <input type="text" id="account-name-input" placeholder="Nama akun/sesi (contoh: Akun Kantor)" />
+        <button id="save-session-btn" class="btn btn-primary">Simpan Sesi</button>
+      </div>
+    </section>
+
+    <section class="sessions-section">
+      <div class="section-title">
+        <h3>Daftar Sesi Tersimpan</h3>
+        <span id="session-count" class="counter">0 sesi</span>
+      </div>
+      <ul id="session-list" class="session-list">
+        <li class="empty-state">Belum ada sesi tersimpan untuk situs ini.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <button id="clear-cookies-btn" class="btn btn-danger-outline">Logout / Bersihkan Cookies</button>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
